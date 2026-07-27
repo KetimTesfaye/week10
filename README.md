@@ -1,3 +1,5 @@
+CI Pipeline Status(https://github.com/KetimTesfaye/week10/actions/workflows/ci.yml/badge.svg)(https://github.com/KetimTesfaye/week10/actions)
+
  Brent Oil Price Change Point Analysis
 
 Project Overview
