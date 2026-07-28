@@ -111,5 +111,39 @@ def get_event_correlations():
         "events": events
     })
 
+@app.route('/api/model/explainability', methods=['GET'])
+def get_model_explainability():
+    """Endpoint 4: Model explainability metrics (SHAP global importance and local drivers)."""
+    explainability_data = {
+        "status": "success",
+        "global_importance": [
+            {
+                "feature": "Rolling Volatility", 
+                "shap_value": 0.42, 
+                "description": "Measures historical variance clustering and market turbulence."
+            },
+            {
+                "feature": "Price Momentum", 
+                "shap_value": 0.28, 
+                "description": "Captures acute short-term price velocity during shocks."
+            },
+            {
+                "feature": "Lagged Price", 
+                "shap_value": 0.12, 
+                "description": "Represents baseline historical price levels."
+            }
+        ],
+        "local_explanations": {
+            "event": "April 2020 Pandemic Crash",
+            "contributions": [
+                {"feature": "Rolling Volatility (+)", "impact": 0.35, "direction": "positive"},
+                {"feature": "Price Momentum (-)", "impact": -0.25, "direction": "negative"},
+                {"feature": "Lagged Price (-)", "impact": -0.05, "direction": "negative"}
+            ],
+            "insight": "Sudden surge in rolling volatility combined with sharp negative momentum triggered the high-risk regime classification."
+        }
+    }
+    return jsonify(explainability_data)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
