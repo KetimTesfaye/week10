@@ -4,7 +4,7 @@ A production-grade quantitative analytics platform combining exploratory data an
 
 Business Problem
 
-Global energy investors, commodity traders, and institutional risk managers face extreme market volatility driven by geopolitical conflicts, supply chain disruptions, and sudden demand contractions (e.g., the 2014 OPEC price collapse and the 2020 pandemic crash)[cite: 1, 3]. Traditional forecasting methods often rely on subjective historical windows, making it difficult to objectively quantify structural market shifts and understand tail-risk drivers[cite: 1, 3].
+Global energy investors, commodity traders, and institutional risk managers face extreme market volatility driven by geopolitical conflicts, supply chain disruptions, and sudden demand contractions (e.g., the 2014 OPEC price collapse and the 2020 pandemic crash). Traditional forecasting methods often rely on subjective historical windows, making it difficult to objectively quantify structural market shifts and understand tail-risk drivers.
 
 Solution Overview
 
